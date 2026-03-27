@@ -1,0 +1,37 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Hardcore Apocalypse + Spartan Wheel - Combined mod pack with donation wheel challenges and hardcore mode",
+    "name": "Hardcore Spartan Wheel",
+    "version": [
+      1,
+      0,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ],
+    "uuid": "02ffd814-0f06-4c04-9152-402110b3d569"
+  },
+  "modules": [
+    {
+      "description": "Hardcore Spartan Wheel (Wheel + Hardcore) - Single entry module",
+      "type": "script",
+      "uuid": "2a630af6-da2d-4b36-8b16-1da1703d66fb",
+      "version": [
+        1,
+        0,
+        1
+      ],
+      "entry": "scripts/entry.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.8.0"
+    }
+  ]
+}
