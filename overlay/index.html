@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wheel Overlay</title>
+  <link rel="stylesheet" href="./wheel.css" />
+</head>
+<body>
+  <div id="wheel-container">
+
+    <!-- Main Wheel -->
+    <canvas id="wheel" width="500" height="500"></canvas>
+
+    <!-- Mini Hotbar Wheel (draggable, hidden by default) -->
+<div id="mini-wheel-container">
+  <canvas id="miniWheel" width="260" height="260"></canvas>
+</div>
+
+    <!-- Center Labels -->
+    <div id="label"></div>
+    <div id="target"></div>
+
+    <!-- Visual ticker (triangle) -->
+    <div id="ticker"></div>    
+  </div>
+  
+  <div id="spin-bank" class="bank-ui">
+    <h3>SPIN BANK</h3>
+    <p>Remaining: <span id="queue-count">0</span></p>
+    <p>Next: <span id="next-donor">None</span></p>
+
+    <!-- Pause status (manual vs world end / apocalypse) -->
+    <div id="pause-status" class="pause-status" style="display:none;">
+      ⏸️ PAUSED
+    </div>
+    
+    <!-- Base price display -->
+    <div id="base-price-display" style="margin: 10px 0; padding: 10px; background: #4CAF50; color: #fff; border-radius: 5px; font-weight: bold; text-align: center;">
+      💵 BASE PRICE: $<span id="base-price">2.00</span>/spin
+    </div>
+	
+	<!-- Revive points cost display -->
+    <div id="revive-price-display" style="margin: 10px 0; padding: 10px; background: #4CAF50; color: #fff; border-radius: 5px; font-weight: bold; text-align: center;">
+      💵 REVIVE: <span id="revive-price">$5.00</span> 
+    </div>
+
+    <!-- Revive points cost display -->
+    <div id="revive-points-display" style="margin: 10px 0; padding: 10px; background: #1976D2; color: #fff; border-radius: 5px; font-weight: bold; text-align: center;">
+      ⭐ REVIVE: <span id="revive-points">1000</span> pts
+    </div>
+    
+    <!-- Discount timer display -->
+    <div id="discount-timer" style="display: none; margin: 10px 0; padding: 10px; background: #FFD700; color: #000; border-radius: 5px; font-weight: bold; text-align: center;">
+      🎁 DISCOUNT: <span id="discount-time">0</span>s @ $<span id="discount-price">1.0</span>/spin
+    </div>
+    
+    <hr>
+    <h4>TOP DONORS</h4>
+    <ul id="top-donors-list">
+    </ul>
+    
+    <hr>
+    <h4>RECENT SPINS</h4>
+    <ul id="history-list">
+        </ul>
+    
+    <hr>
+    <h4>TOP KILLERS 💀</h4>
+    <ul id="top-killers-list">
+    </ul>
+</div>
+  
+
+  <!-- Tick sound preload (important for browsers) -->
+  <audio id="tickSound" src="tick.mp3" preload="auto"></audio>
+
+  <!-- Wheel logic -->
+  <script src="./miniWheel.js"></script> 
+  <script src="./wheel.js"></script>
+</body>
+</html>

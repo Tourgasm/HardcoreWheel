@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "UI hearts overlay for Hardcore Spartan Wheel",
+    "name": "Hardcore Spartan Wheel RP",
+    "version": [
+      1,
+      0,
+      2
+    ],
+    "uuid": "6415aadc-c509-4521-a17d-caf0b1a24312",
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "description": "UI hearts overlay for Hardcore Spartan Wheel",
+      "type": "resources",
+      "uuid": "2dcba916-a53f-410c-ac6a-d727638a7244",
+      "version": [
+        1,
+        0,
+        2
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "02ffd814-0f06-4c04-9152-402110b3d569",
+      "version": [
+        1,
+        0,
+        2
+      ]
+    }
+  ]
+}
